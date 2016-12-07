@@ -1,3 +1,7 @@
+<!---
+  category: CustomUserInteractions Inking
+-->
+
 # Patient chart sample
 
 Shows handwriting recognition with InkCanvas in a simple demo app, as described in
