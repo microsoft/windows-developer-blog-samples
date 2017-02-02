@@ -39,7 +39,12 @@ namespace SQLiteSample
             using (SqliteConnection db = new SqliteConnection("Filename=sqliteSample.db"))
             {
                 db.Open();
-                SqliteCommand insertCommand = new SqliteCommand("INSERT INTO MyTable VALUES (NULL, '" + Input_Box.Text + "');", db);
+                SqliteCommand insertCommand = new SqliteCommand();
+                insertCommand.Connection = db;
+                
+                //Use parameterized query to prevent SQL injection attacks
+                insertCommand.CommandText = "INSERT INTO MyTable VALUES (NULL, @Entry);";
+                insertCommand.Parameters.AddWithValue("@Entry", Input_Box.Text);
                 try
                 {
                     insertCommand.ExecuteReader();
