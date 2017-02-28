@@ -1,0 +1,36 @@
+﻿<Page x:Class="VideoCaptureWithEditing.Views.RecordingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:VideoCaptureWithEditing.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <!--CaptureElement to show the camera preview and record streams-->
+        <CaptureElement Name="PreviewControl"
+                        Stretch="Uniform" />
+
+        <!-- Record buttons -->
+        <StackPanel HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
+            <Button Name="VideoButton"
+                    IsEnabled="False"
+                    Click="VideoButton_Click"
+                    Style="{StaticResource RecordingButtonStyle}">
+                <Grid>
+                    <Ellipse x:Name="StartRecordingIcon"
+                             Fill="Red"
+                             Width="20"
+                             Height="20" />
+                    <Rectangle x:Name="StopRecordingIcon"
+                               Fill="White"
+                               Width="20"
+                               Height="20"
+                               Visibility="Collapsed" />
+                </Grid>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
