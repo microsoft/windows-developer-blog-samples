@@ -1,0 +1,35 @@
+﻿<Page x:Class="HighPerformanceDataBinding.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:HighPerformanceDataBinding"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:viewModels="using:HighPerformanceDataBinding.ViewModels"
+      xmlns:models="using:HighPerformanceDataBinding.Models"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:MainPageViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView ItemsSource="{x:Bind ViewModel.Books}"
+                  SelectionChanged="{x:Bind ViewModel.ListView_OnSelectionChanged}"
+                  ItemContainerStyle="{StaticResource BookListViewItemStyle}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:Book">
+                    <StackPanel>
+                        <TextBlock Text="{x:Bind Title}"
+                                   Style="{StaticResource TitleTextBlockStyle}"/>
+                        <TextBlock Text="{x:Bind Price, Mode=OneWay}"
+                                   Foreground="{x:Bind GetPriceForeground(Price), Mode=OneWay}"
+                                   Style="{StaticResource SubtitleTextBlockStyle}"
+                                   x:Phase="1" />
+                        <Image Source="{x:Bind CoverImageUrl}"
+                               x:Phase="2"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
