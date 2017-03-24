@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="HelloWorld_en-us">
+    <AppName> Hello World </AppName>
+    <Example> My favorite color is green </Example>
+
+    <Command Name="setFavoriteColor">
+      <Example> My favorite color is green</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">[my] favorit color is {color} </ListenFor>
+      <Feedback> Your favorite color is now {color} </Feedback>
+      <Navigate />
+    </Command>
+  </CommandSet>
+</VoiceCommands>
