@@ -1,3 +1,11 @@
+---
+topic: sample
+languages:
+- csharp
+products:
+- windows
+- uwp
+---
 
 # Windows SDK SQLite Example
 
