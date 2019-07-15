@@ -1,10 +1,11 @@
 ---
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
 - windows
 - uwp
+description: "A sample XAML and C# UWP Application using MediaCapture and MediaComposition APIs to record, save and edit video."
 ---
 
 # Windows SDK MediaCapture and MediaComposition example
