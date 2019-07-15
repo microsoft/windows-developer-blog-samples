@@ -1,10 +1,11 @@
 ---
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
 - windows
 - uwp
+description: "Shows handwriting recognition with InkCanvas in a simple demo app."
 ---
 
 <!---
