@@ -1,10 +1,11 @@
 ---
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
 - windows
 - uwp
+description: "A sample C# UWP Application using the Windows SDK version of SQLite."
 ---
 
 # Windows SDK SQLite Example
