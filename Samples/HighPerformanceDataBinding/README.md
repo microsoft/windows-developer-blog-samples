@@ -4,7 +4,7 @@ languages:
 - csharp
 products:
 - windows
-- uwp
+- windows-uwp
 description: "A sample XAML and C# UWP Application to show x:Bind and x:DataType usage."
 ---
 
