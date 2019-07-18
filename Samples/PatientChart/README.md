@@ -4,7 +4,7 @@ languages:
 - csharp
 products:
 - windows
-- uwp
+- windows-uwp
 description: "Shows handwriting recognition with InkCanvas in a simple demo app."
 ---
 
