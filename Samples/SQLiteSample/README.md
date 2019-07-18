@@ -4,7 +4,7 @@ languages:
 - csharp
 products:
 - windows
-- uwp
+- windows-uwp
 description: "A sample C# UWP Application using the Windows SDK version of SQLite."
 ---
 
